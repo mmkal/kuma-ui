@@ -77,7 +77,7 @@ describe("styled function", () => {
         const GreenButton = styled.button\`
           background: green;
         \`
-        const GreenButtonRedTest = styled(GreenButton)\`
+        const GreenButtonRedText = styled(GreenButton)\`
           color: red;
         \`
         function App() {

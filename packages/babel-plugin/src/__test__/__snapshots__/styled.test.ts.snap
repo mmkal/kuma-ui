@@ -45,7 +45,7 @@ const GreenButton = props => {
       const combinedClassName = [props.className, \\"🐻-3239996223\\"].filter(Boolean).join(\\" \\");
       return <__Box as=\\"button\\" {...props} className={combinedClassName} IS_KUMA_DEFAULT />;
     };
-const GreenButtonRedTest = props => {
+const GreenButtonRedText = props => {
       const combinedClassName = [props.className, \\"🐻-1641059616\\"].filter(Boolean).join(\\" \\");
       return <GreenButton {...props} className={combinedClassName} IS_KUMA_DEFAULT />;
     };
@@ -138,7 +138,7 @@ const GreenButton = props => {
       const combinedClassName = [props.className, \\"🐻-3239996223\\"].filter(Boolean).join(\\" \\");
       return <__Box as=\\"button\\" {...props} className={combinedClassName} IS_KUMA_DEFAULT />;
     };
-const GreenButtonRedTest = props => {
+const GreenButtonRedText = props => {
       const combinedClassName = [props.className, \\"🐻-1641059616\\"].filter(Boolean).join(\\" \\");
       return <GreenButton {...props} className={combinedClassName} IS_KUMA_DEFAULT />;
     };
@@ -231,7 +231,7 @@ const GreenButton = props => {
       const combinedClassName = [props.className, \\"🐻-3239996223\\"].filter(Boolean).join(\\" \\");
       return <__Box as=\\"button\\" {...props} className={combinedClassName} IS_KUMA_DEFAULT />;
     };
-const GreenButtonRedTest = props => {
+const GreenButtonRedText = props => {
       const combinedClassName = [props.className, \\"🐻-1641059616\\"].filter(Boolean).join(\\" \\");
       return <GreenButton {...props} className={combinedClassName} IS_KUMA_DEFAULT />;
     };
