@@ -19,8 +19,8 @@ describe("styled tag", () => {
 
     // Act
     const result = compile(code, "file.tsx", {
-        ...componentList,
-        styled: 'styled',
+      ...componentList,
+      styled: "styled",
     });
     // Assert
     expect(getExpectSnapshot(result)).toMatchSnapshot();

@@ -33,28 +33,36 @@ export const processTaggedTemplateExpression = (
       bindings["styled"]
   ) {
     const componentArg = tag.getArguments()[0];
-    console.log(node.getFullText(), componentArg, Node.isStringLiteral(componentArg))
+    console.log(
+      node.getFullText(),
+      componentArg,
+      Node.isStringLiteral(componentArg)
+    );
     if (Node.isStringLiteral(componentArg)) {
-      const componentName = componentArg.getLiteralText()
-      replaceTaggedTemplate(node, getBoxComponent(componentName, bindings))
+      const componentName = componentArg.getLiteralText();
+      replaceTaggedTemplate(node, getBoxComponent(componentName, bindings));
     } else {
-      replaceTaggedTemplate(node, componentArg.getFullText())
+      replaceTaggedTemplate(node, componentArg.getFullText());
     }
   }
 
   // styled.xxx``
-  else if (
-    Node.isPropertyAccessExpression(tag)
-  ) {
-    replaceTaggedTemplate(node, getBoxComponent(tag.getName(), bindings))
+  else if (Node.isPropertyAccessExpression(tag)) {
+    replaceTaggedTemplate(node, getBoxComponent(tag.getName(), bindings));
   }
 };
 
-function getBoxComponent(intrinsicComponentName: string, bindings: Record<string, string>) {
-  return `${bindings["Box"]} as="${intrinsicComponentName}"`
+function getBoxComponent(
+  intrinsicComponentName: string,
+  bindings: Record<string, string>
+) {
+  return `${bindings["Box"]} as="${intrinsicComponentName}"`;
 }
 
-function replaceTaggedTemplate(node: TaggedTemplateExpression, component: string) {
+function replaceTaggedTemplate(
+  node: TaggedTemplateExpression,
+  component: string
+) {
   const className = extractClassName(node.getTemplate());
   if (className) {
     const replacement = `props => {
